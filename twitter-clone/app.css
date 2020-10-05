@@ -1,0 +1,674 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+button {
+  width: 30%;
+  padding: 0.1rem 0px;
+  border: none;
+  border-radius: 4rem;
+  color: white;
+  background: rgba(29, 161, 242, 1);
+}
+
+.subpage {
+  display: none;
+}
+
+.subpage:first-child{
+  display: grid;
+}
+
+
+/* ############################## */
+
+#page {
+  margin: auto;
+  width: 75vw;
+  height: 100vh;
+  padding: 0px 15%;
+  
+}
+
+/* ############################## */
+div#left {
+  position: fixed;  
+  left: 15em;
+  display: grid;
+  grid-template-rows: auto;
+  padding: 1rem 0px;
+  grid-row-gap: 20px;
+  height: 10vh;
+  
+}
+div#left a{
+  color: black;
+  text-decoration: none;
+}
+div#left > a {
+  display: flex;
+  font-weight: 700;
+  align-items: center;
+  transition: 200ms ease-in-out;
+  border-radius: 50px;
+  padding: 0 0.5rem;
+}
+
+div#left>a:hover {
+  background: rgba(29, 161, 242, 0.2);
+  color: rgba(29, 161, 242, 1);
+}
+
+div#left>a:hover>svg{
+    fill: rgba(29,161,242,1);
+}
+
+div#left>a>svg{
+  width: 25px;
+  margin-right: .5rem;
+}
+
+.logout-container{
+  margin-left: .2rem;
+}
+
+.logoutimg {
+  margin-right: .5rem;
+  width: 20px;
+}
+
+div#left .active {
+  font-weight: 400;
+  color: rgba(29, 161, 242, 1);
+}
+div#left > div:last-child {
+  display: grid;
+  grid-template-columns: 3fr 6fr 1fr;
+  align-items: center;
+  padding-top: 3rem;
+  font-size: 0.8rem;
+}
+
+
+div#left > div:last-child img {
+ 
+  margin-top: 5px;
+  padding-right: 5px;
+}
+
+.modal-tweet-btn {
+  display: none;
+}
+
+/* ############################## */
+div#middle {
+  height: 100vh;
+  padding: 1rem 0px;
+  border-left: 1px solid #c9c9c9;
+  border-right: 1px solid #c9c9c9;
+  
+}
+
+div#middle .header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #c9c9c9;
+  align-items: center;
+  padding: 10px;
+}
+
+div#middle .header svg {
+  width: 25px
+}
+
+div#middle .header p{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+textarea{
+  border: none;
+  height: 4rem;
+  font-family: 'Roboto';
+  font-size: 1.3rem;
+}
+
+
+div.post {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  align-items: center;
+  border-bottom: 10px solid rgb(230, 236, 240);
+  padding: 8px;
+  
+}
+
+div.post img{
+  align-self: start;
+  padding: .3rem;
+  margin-right: 1rem;
+}
+
+.happening {
+  display: grid;
+  align-items: center;
+  padding-top: 1rem;
+  
+}
+
+#formTweet{
+  display: grid;
+  gap: .5rem;
+}
+
+#formTweet input {
+  background: rgb(245, 248, 250);
+  height: 5vh;
+  border: none;
+  padding: .8em;
+  color: #9E9E9E;
+}
+
+#btn-post-tweet {
+  width: 8rem;
+  height: 2rem;
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.header-icons {
+  display: grid;
+  align-self: start;
+  grid-template-columns: 10fr 2fr;
+}
+
+.icons {
+  align-self: center;
+}
+
+.icons svg {
+  width: 25px;
+  fill: rgba(29, 161, 242, 1);
+  margin-left: .5rem
+}
+
+.btn-post-tweet{
+  padding: .6rem;
+  width: 80%;
+  justify-self: end;
+  font-family: 'Roboto';
+  font-size: 1.1rem;
+}
+
+.main{
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  padding: .8rem;
+}
+
+.user-tweet {
+  padding: .5rem;
+}
+
+
+.user-info {
+ display: flex;
+ align-items: center;
+ flex: 1 0 10px;
+ width: 100%;
+ margin-bottom: 1rem;
+}
+
+.user-info img {
+  margin-right: .8em;
+}
+
+.user-info h4{
+  margin-right: .1rem;
+}
+
+.user-info p {
+  margin-right: 2rem;
+}
+
+.user-name {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+#tweets {
+  padding: .7rem;
+  margin-left: 4rem;
+   position: relative;
+bottom: 1rem; 
+
+background: #f6f6f6;
+border-radius: 0 0 1rem 1rem;
+padding: 1em;
+}
+
+.title-message h3 {
+  margin-bottom: .7em;
+}
+
+.tweet-info {
+display: flex;
+}
+
+.tweet-info form {
+  margin-left: 1rem;
+}
+
+.tweet-message h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3em;
+  margin-bottom: .5rem;
+}
+
+.tweet-message p{
+  font-family: "Roboto", sans-serif;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 4rem;
+}
+
+.user-info p {
+  padding-left: .3em;
+}
+
+.user-name svg {
+  width: 25px;
+}
+
+.delete-btn {
+  color: white;
+  padding: .4rem;
+  font-weight: 600;
+  background-color: #F15A55;
+  font-size: 1rem;
+  width: 14%;
+  margin-top: 1em;
+  border-radius: .7rem;
+}   
+
+.update-btn{
+  width: 23px;
+  color:black;
+  background: white;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+.update-btn:hover{
+  color: rgba(29, 161, 242, 1);
+}
+
+
+.save-btn {
+  width: 25px;
+  background: white;
+}
+
+.delete-btn:hover{
+  background:#ED3424
+}
+
+
+#formUpdateTweet{
+  display: none;
+  flex-direction: column;
+  width: 15rem;
+  margin-top: 1rem;
+}
+
+#formUpdateTweet input {
+  margin-bottom: .7rem;
+  background:white;
+  height: 5vh;
+  border: none;
+  padding: .8em;
+  color: #9E9E9E;
+}
+
+#formUpdateTweet button {
+  color: white;
+  padding: .4rem;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 25%;
+  margin-top: 1em;
+  border-radius: .7rem;
+}
+
+.shared-tweet{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #c9c9c9;
+  padding: 1rem;
+  border-radius: 20px;
+  margin-top: .8rem;
+}
+
+.lorem {
+  padding-top: .7rem;
+}
+
+.shared-user-info {
+  display: flex;
+  align-items: center;
+}
+
+.shared-user-info img {
+  width: 25px;
+}
+
+.tweetimg{
+  display: block;
+  border-radius:5%;
+  margin-top: 1rem;
+}
+
+.tweet-icons {
+  display: block;
+  display: flex;
+  margin-top: 1.4em;
+  justify-content: space-between;
+}
+
+.tweet-icons svg {
+width: 20px;
+}
+
+/* ############################## */
+div#right {
+  margin-top: 1em;
+  position: fixed;
+  display: grid;
+  top: 0;
+  right: 10em;
+  
+}
+.search-box{
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+.search-input{
+  width: 100%;
+  padding: 10px;
+  border-radius:3rem ;
+  border: none;
+  font-size: 20px;
+  background: rgb(230, 236, 240);
+}
+
+.trends {
+  display: grid;
+  grid-template-rows: auto;
+  background: rgb(245, 248, 250);
+  border-radius: 25px;
+  margin-top: 1rem;
+  padding: 1rem;
+
+  
+}
+
+.foryou {
+  display: grid;
+  grid-template-columns: 18fr  2fr;
+  align-items: center;
+  border-bottom: 1px solid #c9c9c9;
+  padding: 1.5rem 0;
+}
+
+.foryou svg{
+  width: 25px;
+}
+
+.foryou:first-child svg {
+  fill:rgba(29, 161, 242, 1);
+  
+}
+
+.recom {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 1rem;
+  align-items: center;
+  margin-bottom: .6rem;
+}
+.recom button {
+  width: 90%;
+  height: 60%;
+  justify-self: flex-end;
+  font-family: 'Roboto';
+  font-size: 1.1em;
+  background:rgb(245, 248, 250);
+  color: rgba(29, 161, 242, 1);
+  border: 1px solid rgba(29, 161, 242, 1);;
+
+}
+
+.recom img{
+  border-radius: 50%;
+  width: 4rem;
+  margin-left: 10px;
+
+}
+
+.trending-text-flex{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  
+}
+
+.trending-text-flex>p {
+  font-size: .9em;
+  padding-bottom: .5rem;
+}
+
+.show-more {
+  padding-top: 1rem;
+  width: 50%;
+  border: none;
+  border-radius: 4rem;
+  color: white;
+  background: none;
+  color: rgba(29, 161, 242, 1);
+  font-size: 1rem;
+}
+
+/* ############################## */
+svg.active {
+  width: 100%;
+  fill: rgba(29, 161, 242, 1);
+}
+
+
+/* ###############PROFILE PAGE################## */
+
+.header-profile{
+  padding: .8rem;
+}
+
+.header-profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-profile h5 {
+  font-size: 1.5em;
+}
+
+.profileimg {
+  border-radius: 50%;
+  width: 10rem;
+  margin-left: 10px;
+  border: 5px solid white;
+}
+
+.cover {  
+  background: rgb(204, 214, 221);
+  height: 15rem;
+}
+
+.user-profile {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  transform: translateY(-5rem);
+}
+
+.profile-btn {
+  background: white;
+  width: 10rem;
+  height: 30px;
+  color:  rgba(29, 161, 242, 1);
+  font-weight: 700;
+  padding: 1em;
+  justify-self: end;
+  align-self: center;
+  margin-top: 50px;
+  margin-right: 10px;
+  padding-bottom: 25px;
+  border: 2px solid rgba(29, 161, 242, 1);
+}
+
+
+.profile-bio {
+  margin-left: 2rem;
+}
+
+
+
+.profile-nav{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  border-bottom: 1px solid  #c9c9c9;
+}
+
+.profile-nav p {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.profile-nav:first-child {
+  border-bottom: 2px solid rgba(29, 161, 242, 1);
+}
+
+
+/* ##########login view############ */
+
+
+
+#signupFormDiv {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+#signupForm {
+  display: grid;
+  margin: auto;
+  padding: 20px;
+  width: 30vw;
+  background: white;
+  border-radius: 2rem;
+  gap: 2rem;
+}
+
+
+.hideBtn {
+  width: 30px;
+  padding: 5px;
+  font-size: 1.3em;
+  font-weight: 700;
+  font-family: 'Roboto';
+  background: white;
+  border-radius: .5rem;
+  color: black;
+}
+
+#signupForm>input {
+  background: rgb(245, 248, 250);
+  height: 5vh;
+  border: none;
+  border-bottom: 3px solid rgb(101, 119,134);
+  padding: .8em;
+}
+
+.login-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+.login-header h1{
+  font-size: 1.5em;
+  font-family: "Roboto", sans-serif;
+  margin-top: 1rem;
+}
+
+.login-header svg {
+  width: 40px;
+}
+
+.login-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 30vw;
+  margin: auto;
+  gap: 1rem;
+}
+
+.login-form>input{
+  background: rgb(245, 248, 250);
+  height: 5vh;
+  border: none;
+  border-bottom: 3px solid rgb(101, 119,134);
+  padding: .8em;
+}
+
+.login-btn {
+ height: 3rem;
+ width: 100%;
+ font-size: 1.3rem;
+ font-family: "Roboto", sans-serif;
+}
+
+.signup-btn {
+  background: white;
+  border: 1px solid rgba(29, 161, 242, 1);
+  color: rgba(29, 161, 242, 1);
+}
+
+
+

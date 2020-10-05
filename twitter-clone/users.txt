@@ -1,0 +1,1 @@
+[{"id":"5f74704405126","email":"a@a.com","password":"$2y$10$sS1ojT0LEndu1xIfwOc\/ZuP4a5.c1Xx.CLRBgySbXyeZYmwPESqMy","name":"George Adrian Aiftincai","tweets":[]}]
