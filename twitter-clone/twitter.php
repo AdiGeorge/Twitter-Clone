@@ -131,12 +131,7 @@ if( ! isset($_SESSION['userId']) ){
                     name="tweetMessage"
                     value="MESSAGE"
             >
-            <input  type="text"
-                    placeholder="note"
-                    name="note"
-                    value="note"
-            >
-          
+           
             <button id="btn-post-tweet">
                 Tweet
             </button>
