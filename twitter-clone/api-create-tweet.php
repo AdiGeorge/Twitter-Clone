@@ -50,7 +50,6 @@ try{
   $jTweet->id      = $sTweetId;
   $jTweet->title   = $_POST['tweetTitle'];
   $jTweet->message = $_POST['tweetMessage'];
-  $jTweet->note = $_POST['note'];
   // $jTweet->active  = 1;
   
 
